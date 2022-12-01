@@ -1,14 +1,14 @@
 import React from 'react';
 import { Bars, Nav, NavIcon, NavLink } from './NavbarElement';
+import logo from '../../assets/cp-logo.png';
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
   return (
     <>
       <Nav>
-        <NavLink to="/">PIZZA</NavLink>
+        <NavLink src={logo}></NavLink>
         <NavIcon>
-          <p>Menu</p>
-          <Bars />
+          <Bars onClick={toggle} />
         </NavIcon>
       </Nav>
     </>
